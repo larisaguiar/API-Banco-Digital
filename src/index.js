@@ -1,6 +1,6 @@
-const express = require('express');
-const rotas = require('./rotas');
-const validaSenha = require('./intermediarios');
+const express = require("express");
+const rotas = require("./rotas");
+const { validaSenha } = require("./intermediarios");
 
 const app = express();
 
@@ -8,13 +8,6 @@ app.use(express.json());
 app.use(validaSenha);
 app.use(rotas);
 
-
-
-
 app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3000');
-  });
-  
-//app.get('/banco', (req, res) => {
-  //  res.send('Olá, mundo!');
- // });
+  console.log("Servidor rodando na porta 3000");
+});
